@@ -1,6 +1,5 @@
-Fitness Administration System - FAS
-
-ASP.NET Core - Gym Management Software
+ASP.NET Core 
+Fitness Administration System - FAS is Gym Management Software
 
 ![crud sport groups jpg](https://user-images.githubusercontent.com/25099980/45920292-c36d8680-be56-11e8-8334-7a4a0475c685.png)
 ![register user](https://user-images.githubusercontent.com/25099980/45920299-e304af00-be56-11e8-8df6-58bb7b9d7c11.jpg)
