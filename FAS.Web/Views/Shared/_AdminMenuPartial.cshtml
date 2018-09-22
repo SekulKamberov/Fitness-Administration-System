@@ -1,0 +1,201 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using FAS.Web.Models
+
+@inject SignInManager<User> SignInManager
+
+
+@if (User.IsInRole("Administrator"))
+{
+
+<div class="navbar-header">
+    <a class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Register">
+        <img alt="Brand" src="~/images/registration.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="All">
+        <img alt="Brand" src="~/images/all-mambers.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Gander" asp-route-id="2">
+        <img alt="Brand" src="~/images/men.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Gander" asp-route-id="1">
+        <img alt="Brand" src="~/images/women.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Gander" asp-route-id="3">
+        <img alt="Brand" src="~/images/girls.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Gander" asp-route-id="4">
+        <img alt="Brand" src="~/images/boys.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Gander" asp-route-id="0">
+        <img alt="Brand" src="~/images/gaypeople.png" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/ticket.jpg" width="54" height="54">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/top-clients.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/top-clients.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/top-clients.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="NotPaidYet">
+        <img alt="Brand" src="~/images/notpayed.jpg" width="50" height="50">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Blocked">
+        <img alt="Brand" src="~/images/blocked.gif" width="53" height="53">
+    </a><br /><br /><br />
+
+
+    <a class="navbar-brand" asp-area="" asp-controller="Users" asp-action="Index">
+        <img alt="Brand" src="~/images/addroles.jpg" width="43" height="43">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+        <img alt="Brand" src="~/images/allsports.png" width="43" height="43">
+    </a>
+
+
+    <a class="navbar-brand" asp-area="" asp-controller="Sport" asp-action="Create">
+        <img alt="Brand" src="~/images/addsport.jpg" width="48" height="48">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="#" asp-action="#">
+        <img alt="Brand" src="~/images/Pink_Luma.png" width="43" height="43">
+    </a>
+
+    <a class="navbar-brand" asp-area="" asp-controller="Sport" asp-action="Index">
+        <img alt="Brand" src="~/images/Pink_Luma.png" width="43" height="43">
+    </a>
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/Pink_Luma.png" width="43" height="43">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/3d.png" width="43" height="43">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/3d.png" width="43" height="43">
+    </a>
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/3d.png" width="43" height="43">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/3d.png" width="43" height="43">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/3d.png" width="45" height="45">
+    </a>
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/palmi.jpg" width="45" height="45">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/phone.png" width="45" height="45">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/phone.png" width="45" height="45">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/phone.png" width="45" height="45">
+    </a><br /><br /><br />
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/ivalids.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/pidgin.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+
+    <a class="navbar-brand" href="#">
+        <img alt="Brand" src="~/images/blue-vlc.png" width="35" height="35">
+    </a>
+</div>
+ 
+}

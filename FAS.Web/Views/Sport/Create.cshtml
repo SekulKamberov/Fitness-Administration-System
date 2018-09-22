@@ -1,0 +1,44 @@
+﻿@using FAS.Web.Models.Sports
+@model AddSportFormModel
+
+<br/>
+
+<form method="post" class="col-md-12">
+    <h1>Create Sport Group</h1><br/>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="7"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <label asp-for="StartDate"></label>
+            <input asp-for="StartDate" class="form-control" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EndDate"></label>
+            <input asp-for="EndDate" class="form-control" />
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TrainerId"></label>
+            <select asp-for="TrainerId" asp-items=@Model.Trainers class="form-control"></select>
+            <span asp-validation-for="TrainerId" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Course</button>
+    </div>
+</form>
+   
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

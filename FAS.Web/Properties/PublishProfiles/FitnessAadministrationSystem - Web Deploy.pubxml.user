@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjHW4B6IcwEa4LhD4GD0DxAAAAAACAAAAAAAQZgAAAAEAACAAAACbgU4ezQUPkOv852+3qBHATQtKeXcPUvQTLuy7YUh39AAAAAAOgAAAAAIAACAAAACtvKDSklA7z8q1JVy5K88bIPonpL6yBFz6nz5L/mSjRYAAAAA4pwiB34wTzf7JaPMeQG88ce/kxTTBm0FxIfoKp9Htr3usqZu1TPXSRenXwaOL51HdP61GAzXtyDDMq4zR9xzB+Syhc7LhV8Fi/C90sT04z8CskkASPGV30EI79fpOjfCozASVqVtLxVNnlbAKi4LNJn1OQT2vtJAmijdzRPIko0AAAAAXTYDrP+xDwfqdNGztXUsttLNFh5IIsf9zybg+UckLF0wYQ4hdeyvFe3bhFxvFe+RWKWLz9+VxuElU5BNwFNMT</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:sechko.database.windows.net,1433%3bInitial Catalog=FAS%3bPersist Security Info=False%3bUser ID=sekul4o%3bPassword=Sekul369%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

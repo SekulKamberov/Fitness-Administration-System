@@ -1,0 +1,41 @@
+﻿@model UserListingViewModel
+
+@{
+    ViewData["Title"] = "Add Role to members";
+}
+<br/> <br />
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Add to Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Email</td>
+            <td>
+                <form method="post" asp-controller="Users" asp-action=@nameof(UsersController.AddToRole)>
+                    <div >
+                        <input hidden name="UserId" asp-for=@user.Id />
+                        <div class="col-md-5">
+                            <select name="Role" asp-items="Model.Roles" class="form-control"></select>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="submit" class="btn btn-primary" value="Add Role" />
+                        </div>
+                    </div>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

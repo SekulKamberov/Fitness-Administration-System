@@ -1,0 +1,96 @@
+﻿<h3> @ViewData["Title"]   </h3>
+
+<table class="table-bordered table-hover col-md-12 table-responsive">
+    <thead>
+        <tr>
+            <th>
+                Photo
+            </th>
+            <th>
+                Name & Gander
+            </th>
+            <th>
+                Date, Mail, Phone
+            </th>
+            <th>
+                Adress
+            </th>
+            <th>
+                Member
+            </th>
+            <th>
+                Proof
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Pay
+            </th>
+            <th>
+                Star
+            </th>
+            <th>
+                Block
+            </th>
+
+            <th>
+                Modify
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td width="150" height="170">
+                    <a asp-controller="Users" asp-action="Profile" asp-route-id="@user.Id">
+                        <img src="~/@user.UserPhoto" asp-append-version="true" width="150" height="170" />
+                    </a>
+                </td>
+
+                <td class="col-md-1">
+                    @user.FirstName  <br /> @user.LastName <br /><br />
+                    @user.Sex
+                </td>
+
+                <td>
+                    @user.Date <br /><br />
+                    @user.Email <br /><br />
+                    @user.PhoneNumber
+                </td>
+
+                <td class="col-md-2">
+                    @user.Adress
+                </td>
+
+                <td>
+                    @user.MembershipType
+
+                <td>
+                    @user.ProofGiven
+                </td>
+
+                <td>
+                    @user.Age
+                </td>
+
+                <td>
+                    @user.IsPayed
+                </td>
+
+                <td>
+                    @user.IsStarMember
+                </td>
+                <td>
+                    @user.IsBlocked
+                </td>
+
+                <td>
+                    <a class="btn btn-warning btn-sm" href="/users/edit/@user.Id">Edit</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\bin\Debug\netstandard2.0\FAS.Data.deps.json
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\bin\Debug\netstandard2.0\FAS.Data.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\bin\Debug\netstandard2.0\FAS.Data.pdb
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.AssemblyInfoInputs.cache
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.AssemblyInfo.cs
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.pdb
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.csproj.CopyComplete
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.csprojAssemblyReference.cache
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\bin\Debug\netstandard2.0\FAS.Data.deps.json
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\bin\Debug\netstandard2.0\FAS.Data.dll
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\bin\Debug\netstandard2.0\FAS.Data.pdb
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\bin\Debug\netstandard2.0\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.csprojAssemblyReference.cache
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.AssemblyInfoInputs.cache
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.AssemblyInfo.cs
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.csproj.CopyComplete
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.dll
+C:\Users\Sekul\Desktop\FAS.Web 20.09.2018\FAS.Data\obj\Debug\netstandard2.0\FAS.Data.pdb

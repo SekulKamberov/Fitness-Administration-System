@@ -1,0 +1,63 @@
+﻿@using FAS.Services.Models
+
+@model UserDetailsModel
+<br /><br /><br />
+      <div class="col-md-10 col-lg-offset-2">
+
+          <div class="col-md-4">
+              @if (Model.IsStarMember)
+              {<img src="~/images/5-stars.png" width="159" height="50" class="col-lg-offset-2" />}
+              <img class="img-circle img-responsive" src="~/@Model.UserPhoto" asp-append-version="true" width="250" height="280" />
+          </div>
+
+          <h2>@Model.FirstName  @Model.LastName</h2><br/>
+
+          <div class="col-md-3">
+              <div class="form-group">
+                  <label asp-for="Age"></label>
+                  @Model.Age
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="Height"></label>
+                  @Model.Height
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="Weight"></label>
+                  @Model.Weight
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="Email"></label>
+                  @Model.Email
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="PhoneNumber"></label>
+                  @Model.PhoneNumber
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="Date"></label>
+                  @Model.Date
+              </div>
+          </div>
+
+          <div class="col-md-3">
+              <div class="form-group">
+                  <label asp-for="IsPayed"></label>
+                  @Model.IsPayed
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="IsStarMember"></label>
+                  @Model.IsStarMember
+              </div>
+
+              <div class="form-group">
+                  <label asp-for="MembershipType"></label>
+                  @Model.MembershipType
+              </div>
+          </div>
+      </div>               

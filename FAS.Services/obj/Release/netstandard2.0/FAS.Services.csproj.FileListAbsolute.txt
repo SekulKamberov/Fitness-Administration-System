@@ -1,0 +1,14 @@
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\FAS.Services.deps.json
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\FAS.Services.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\FAS.Services.pdb
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\FAS.Data.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\FAS.Data.pdb
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\bin\Release\netstandard2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.csprojAssemblyReference.cache
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.csproj.CoreCompileInputs.cache
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.AssemblyInfoInputs.cache
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.AssemblyInfo.cs
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.csproj.CopyComplete
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.dll
+C:\Users\Sekul\Desktop\FAS.Web\FAS.Services\obj\Release\netstandard2.0\FAS.Services.pdb

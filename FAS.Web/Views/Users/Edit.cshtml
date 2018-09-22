@@ -1,0 +1,12 @@
+﻿@model UserDetailsModel 
+@{
+    ViewData["Title"] = "Modify";
+}
+<br />
+
+<div class="col-md-12 col-md-offset-1">
+    <h3>@ViewData["Title"] @Model.FirstName's Account </h3>  <br />
+
+    @Html.Partial("_UserForm", Model)
+</div>
+

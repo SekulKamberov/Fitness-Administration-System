@@ -1,0 +1,61 @@
+﻿@using FAS.Web.Controllers
+@model SportDetailsViewModel
+
+@{
+    ViewData["Title"] = "Sport Details";
+}
+<br /><div class="col-md-pull-7">
+    <h1>
+        @Model.Sport.Name Group
+    </h1>
+    <h3 class="text-muted">@Model.Sport.StartDate.ToShortDateString() - @Model.Sport.EndDate.ToShortDateString() | Coach: @Model.Sport.Trainer</h3><br />
+    <div class="col-md-3">
+        <img class="img-circle img-responsive" src="~/@Model.Sport.UserPhoto" asp-append-version="true" />
+    </div><br />
+    <div class="col-md-pull-4">
+        <h5 class="text-muted">@Model.Sport.Clients user@(Model.Sport.Clients == 1 ? string.Empty : "s") enrolled in sport</h5>
+        @if (User.Identity.IsAuthenticated)
+        {
+            if (Model.Sport.StartDate >= DateTime.UtcNow.Date)
+            {
+                if (Model.IsUserEnrolledInSport)
+                {
+                    <form method="post" asp-controller="Sport"
+                        asp-action=@nameof(SportController.SignOutUser)
+                        asp-route-id=@Model.Sport.Id>
+                        <input type="submit" class="btn btn-warning" value="Sign Out" />
+                    </form>
+                }
+                else
+                {
+                    <form method="post" asp-controller="Sport"
+                        asp-action=@nameof(SportController.SignUpUser)
+                        asp-route-id=@Model.Sport.Id>
+                        <input type="submit" class="btn btn-primary" value="Sign Up" />
+                    </form>
+                }
+            }
+            else
+            {
+                if (Model.Sport.EndDate < DateTime.UtcNow)
+                {
+                    <span>This sport has already finished.</span>
+                }
+                else
+                {
+                    <span>This sport has already started.</span>
+                }
+            }
+        }
+        else
+        {
+            <span>
+                To enroll in this sport please
+                <a asp-controller="Account" asp-action=@nameof(AccountController.Login)
+                    asp-route-returnUrl=@Context.Request.Path>login</a> into your account.
+            </span>
+        }
+        <br />
+        <h4>@Model.Sport.Description</h4>
+    </div>
+    </div>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SportListingServiceModel>
+
+<br />
+<h1 class="col-lg-offset-4">All Active Sport Groups</h1><br />
+<div class="container-fluid class=" col-md-12"">
+
+
+    <div class="col-md-12">
+
+        <div class="row home-page">
+            @foreach (var sport in Model)
+            {
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">
+                                <a asp-controller="Sport"
+                                   asp-action=@(nameof(SportController.Details))
+                                   asp-route-id=@sport.Id>@sport.Name</a>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <h4 class="text-muted text-center">@sport.StartDate.ToShortDateString() - @sport.EndDate.ToShortDateString()</h4>
+                            <h5 class="text-muted text-center">Coach: @sport.Trainer</h5>
+                            <div class="col-md-4">
+                                <img class="img-circle img-responsive" src="~/@sport.UserPhoto" asp-append-version="true" />
+                            </div>
+                            <br />
+                            <div >@sport.Description</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
