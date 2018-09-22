@@ -3611,11 +3611,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Data\\FAS.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Data\\FAS.Data.csproj",
       "projectName": "FAS.Data",
-      "projectPath": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Data\\FAS.Data.csproj",
+      "projectPath": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Data\\FAS.Data.csproj",
       "packagesPath": "C:\\Users\\Sekul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Data\\obj\\",
+      "outputPath": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

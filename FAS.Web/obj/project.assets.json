@@ -13374,11 +13374,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Web\\FAS.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Web\\FAS.Web.csproj",
       "projectName": "FAS.Web",
-      "projectPath": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Web\\FAS.Web.csproj",
+      "projectPath": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Web\\FAS.Web.csproj",
       "packagesPath": "C:\\Users\\Sekul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Web\\obj\\",
+      "outputPath": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13397,11 +13397,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Data\\FAS.Data.csproj": {
-              "projectPath": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Data\\FAS.Data.csproj"
+            "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Data\\FAS.Data.csproj": {
+              "projectPath": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Data\\FAS.Data.csproj"
             },
-            "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Services\\FAS.Services.csproj": {
-              "projectPath": "C:\\Users\\Sekul\\Desktop\\FAS.Web\\FAS.Services\\FAS.Services.csproj"
+            "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Services\\FAS.Services.csproj": {
+              "projectPath": "C:\\Users\\Sekul\\Documents\\GitHub\\Fitness-Administration-System\\FAS.Services\\FAS.Services.csproj"
             }
           }
         }

@@ -32,7 +32,11 @@
             this.userManager = userManager;
         }
 
-        public async Task<IActionResult> Index() => View();
+        public IActionResult Index()
+        {
+            return this.View();
+        }
+    
 
         public async Task<IActionResult> Details(int id)
         {

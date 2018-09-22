@@ -21,6 +21,7 @@
     using FAS.Web.Infrastructure.Extensions;
 
     using FAS.Data.Models;
+    using FAS.Web.Infrastructure.Filters;
 
     [Authorize(Roles =  WebConstants.AdministratorRole)]
     public class UsersController : Controller
@@ -61,6 +62,7 @@
         }
 
         [HttpPost]
+        [ValidateModelState]
         public async Task<IActionResult> AddToRole(AddUserToRoleFormModel model)
         {
             var roleExists = await this.roleManager.RoleExistsAsync(model.Role);
@@ -157,6 +159,7 @@
         }
 
         [HttpPost]
+        [ValidateModelState]
         public IActionResult Edit(UserDetailsModel user)
         {
             if (!ModelState.IsValid)
