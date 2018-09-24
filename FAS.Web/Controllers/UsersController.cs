@@ -6,10 +6,9 @@
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Mvc;
-    
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.AspNetCore.Identity;
-	using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Authorization;
 
     using FAS.Services.Contracts;
@@ -40,6 +39,8 @@
             this.userManager = userManager;
         }
 
+        [ResponseCache(Duration = 60 * 12)]
+        [RedirectException]
         public async Task<IActionResult> Index()
         {
             var users = await this.userService.AllAsync();
@@ -162,10 +163,10 @@
         [ValidateModelState]
         public IActionResult Edit(UserDetailsModel user)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(user);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(user);
+            //}
 
             this.userService.Edit(user);
 
