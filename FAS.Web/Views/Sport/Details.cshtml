@@ -8,12 +8,17 @@
     <h1>
         @Model.Sport.Name Group
     </h1>
-    <h3 class="text-muted">@Model.Sport.StartDate.ToShortDateString() - @Model.Sport.EndDate.ToShortDateString() | Coach: @Model.Sport.Trainer</h3><br />
+    <h2 class="text-muted">
+        @Model.Sport.StartDate.ToShortDateString() - @Model.Sport.EndDate.ToShortDateString()
+    </h2>
+    <h3 class="text-muted">Coach: @Model.Sport.Trainer</h3><br />
     <div class="col-md-3">
         <img class="img-circle img-responsive" src="~/@Model.Sport.UserPhoto" asp-append-version="true" />
-    </div><br />
+    </div> <br /> <br /> <br /> <br />
+    <h4>@Model.Sport.Description</h4>
     <div class="col-md-pull-4">
         <h5 class="text-muted">@Model.Sport.Clients user@(Model.Sport.Clients == 1 ? string.Empty : "s") enrolled in sport</h5>
+
         @if (User.Identity.IsAuthenticated)
         {
             if (Model.Sport.StartDate >= DateTime.UtcNow.Date)
@@ -21,16 +26,16 @@
                 if (Model.IsUserEnrolledInSport)
                 {
                     <form method="post" asp-controller="Sport"
-                        asp-action=@nameof(SportController.SignOutUser)
-                        asp-route-id=@Model.Sport.Id>
+                          asp-action=@nameof(SportController.SignOutUser)
+                          asp-route-id=@Model.Sport.Id>
                         <input type="submit" class="btn btn-warning" value="Sign Out" />
                     </form>
                 }
                 else
                 {
                     <form method="post" asp-controller="Sport"
-                        asp-action=@nameof(SportController.SignUpUser)
-                        asp-route-id=@Model.Sport.Id>
+                          asp-action=@nameof(SportController.SignUpUser)
+                          asp-route-id=@Model.Sport.Id>
                         <input type="submit" class="btn btn-primary" value="Sign Up" />
                     </form>
                 }
@@ -50,12 +55,43 @@
         else
         {
             <span>
-                To enroll in this sport please
+                To Enroll in this sport please
                 <a asp-controller="Account" asp-action=@nameof(AccountController.Login)
-                    asp-route-returnUrl=@Context.Request.Path>login</a> into your account.
+                   asp-route-returnUrl=@Context.Request.Path>login</a> into your account.
             </span>
         }
-        <br />
-        <h4>@Model.Sport.Description</h4>
+     
+        <br /> <br />
+        <h1>All Enrolled:</h1>
+        @foreach (var user in Model.TraiUsersnings)
+        {
+            <div class="panel-body">
+                <div class="table-container">
+                    <table class="table table-filter">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <br />
+                                        <a href="#" class="pull-left">
+                                            <img class="img-circle img-responsive" src="~/@user.UserPhoto" asp-append-version="true" width="100" height="50" />
+                                        </a>
+                                        <div class="media-body">
+                                            <span class="media-meta">Febrero 13, 2016</span>
+                                            <h3 class="title">
+                                                @user.FirstName <span class="pagado">@user.LastName</span>
+                                            </h3>
+                                            <h5>@user.PhoneNumber</h5>
+                                            <b class="summary">@user.Sex</b>
+                                            <p class="summary"> @user.UserName</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
     </div>
-    </div>
+</div>

@@ -13,7 +13,6 @@
     using FAS.Web.Models;
     using FAS.Services.Contracts;
     using FAS.Services.Models;
-    using FAS.Web.Infrastructure.Filters;
     using FAS.Web.Models.HomeViewModels;
 
     [Authorize]
@@ -21,6 +20,7 @@
     {
         private const int pageSize = 10;
         private const int page = 1;
+
         private readonly ISportService sportService;
         private readonly IUserService userService;
 
@@ -32,7 +32,6 @@
 
         public async Task<IActionResult> Index() => View(await this.sportService.AllActiveAsync());
 
-       
         public IActionResult Search(string search)
         {
             var users = this.userService.AllWithBlocked();
@@ -40,7 +39,7 @@
             if (!string.IsNullOrWhiteSpace(search))
             {
                 users = users.Where(s => s.FirstName.ToLower().Contains(search.ToLower()));
-                    
+
             }
 
             return View(new HomeIndexUserPagingModel
@@ -62,6 +61,7 @@
         public IActionResult Contact()
         {
             ViewData["Message"] = "sechko contact page.";
+
             return View();
         }
 

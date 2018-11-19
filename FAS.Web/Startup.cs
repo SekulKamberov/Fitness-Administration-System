@@ -6,22 +6,22 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.FileProviders;
+    using Microsoft.Extensions.DependencyInjection;
 
     using AutoMapper;
 
-    using FAS.Web.Models;
-    using FAS.Web.Services;
     using FAS.Data;
+    using FAS.Web.Models;
     using FAS.Data.Models;
+    using FAS.Web.Services;
     using FAS.Web.Infrastructure.Extensions;
-
 
     public class Startup
     {
@@ -66,7 +66,6 @@
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             //app.UseDatabaseMigration();
-
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -79,9 +78,7 @@
             }
 
             app.UseStaticFiles();
-
             app.UseAuthentication();
-
             app.UseMvcWithDefaultRoute();
         }
     }

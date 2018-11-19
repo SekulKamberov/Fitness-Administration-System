@@ -15,6 +15,7 @@
 
         public string Name { get; set; }
 
+        [Description]
         public string Description { get; set; }
 
         public DateTime StartDate { get; set; }

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FAS.Common\FAS.Common.csproj" />
     <ProjectReference Include="..\FAS.Data\FAS.Data.csproj" />
   </ItemGroup>
 

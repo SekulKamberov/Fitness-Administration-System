@@ -1,5 +1,6 @@
 ﻿namespace FAS.Services.Contracts
 {
+    using FAS.Data.Models;
     using FAS.Services.Models;
     using System;
     using System.Collections.Generic;
@@ -9,6 +10,8 @@
     public interface ISportService
     {
         //IEnumerable<AllSportsViewModel> All(int page = 1, int pageSize = 10);
+
+        Task<IEnumerable<User>> UsersInSport(int sportId);
 
         Task Create(string name, string description, DateTime startDate, DateTime endDate, string trainerId);
 

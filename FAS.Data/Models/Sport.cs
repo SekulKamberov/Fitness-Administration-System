@@ -22,10 +22,16 @@
 
         public User Trainer { get; set; }
 
+        public int ScheduleId { get; set; }
+
+        public Schedule Schedule { get; set; }
+
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
 
-        public ICollection<UserSport> Clients { get; set; } = new List<UserSport>();
+        public ICollection<UserSport> UserSports { get; set; } = new List<UserSport>();
+
+        public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
     }
 }

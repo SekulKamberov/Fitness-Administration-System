@@ -9,20 +9,19 @@
 }
 
 <br /><br />
+     
+<h3> User Search</h3>
 
-<h3> @ViewData["Title"]   </h3>
+<form method="get" class="search-form" style="width: 225px;">
+    <div class="form-group has-feedback">
+        <label for="search" class="sr-only">Search</label>
+        <input type="text" class="form-control" name="search" id="search" placeholder="Search + Enter" value="@Model.Search" />
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+</form>
+    
 
-
-    <form method="get" class="search-form" style="width: 225px;">
-        <div class="form-group has-feedback">
-            <label for="search" class="sr-only">Search</label>
-            <input type="text" class="form-control" name="search" id="search" placeholder="search" value="@Model.Search" />
-            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-        </div>
-    </form>
-
-
-<table class="table-bordered table-hover table-responsive">
+<table class="table-bordered table-hover table-responsive col-md-12">
     <thead>
         <tr>
             <th class="col-md-1">
@@ -55,69 +54,72 @@
             <th class="col-md-1">
                 Block
             </th>
-
-            <th class="col-md-1">
-                Modify
-            </th>
-        </tr>
+            @if (User.IsInRole("Administrator"))
+            {
+                <th class="col-md-1">
+                    Modify
+                </th>
+            }
+            </tr>
     </thead>
     <tbody>
         @foreach (var user in Model.Users)
         {
-            <tr>
-                <td width="150" height="170">
-                    <a asp-controller="Users" asp-action="Profile" asp-route-id="@user.Id">
-                        <img src="~/@user.UserPhoto" asp-append-version="true" width="150" height="170" />
-                    </a>
-                </td>
+        <tr>
+            <td width="150" height="170">
+                <a asp-controller="Users" asp-action="Profile" asp-route-id="@user.Id">
+                    <img src="~/@user.UserPhoto" asp-append-version="true" width="150" height="170" />
+                </a>
+            </td>
 
 
 
-                <td class="col-md-1">
-                    @if (user.IsStarMember)
-                    {<img src="~/images/5-stars.png" width="90" height="30" />}
-                    @user.FirstName  <br /> @user.LastName <br /><br />
-                    @user.Sex
-                </td>
+            <td class="col-md-1">
+                @if (user.IsStarMember)
+                {<img src="~/images/5-stars.png" width="90" height="30" />}
+                @user.FirstName  <br /> @user.LastName <br /><br />
+                @user.Sex
+            </td>
 
-                <td class="col-md-1">
-                    @user.Date <br /><br />
-                    @user.Email <br /><br />
-                    @user.PhoneNumber
-                </td>
+            <td class="col-md-1">
+                @user.Date <br /><br />
+                @user.Email <br /><br />
+                @user.PhoneNumber
+            </td>
 
-                <td class="col-md-2">
-                    @user.Adress
-                </td>
+            <td class="col-md-2">
+                @user.Adress
+            </td>
 
-                <td class="col-md-1">
-                    @user.MembershipType
+            <td class="col-md-1">
+                @user.MembershipType
 
-                <td class="col-md-1">
-                    @user.ProofGiven
-                </td>
+            <td class="col-md-1">
+                @user.ProofGiven
+            </td>
 
-                <td class="col-md-1">
-                    @user.Age
-                </td>
+            <td class="col-md-1">
+                @user.Age
+            </td>
 
-                <td class="col-md-1">
-                    @user.IsPayed
-                </td>
+            <td class="col-md-1">
+                @user.IsPayed
+            </td>
 
-                <td class="col-md-1">
-                    @user.IsStarMember
-                </td>
+            <td class="col-md-1">
+                @user.IsStarMember
+            </td>
 
-                <td class="col-md-1">
-                    @user.IsBlocked
-                </td>
+            <td class="col-md-1">
+                @user.IsBlocked
+            </td>
 
-
+            @if (User.IsInRole("Administrator"))
+            {
                 <td class="col-md-1">
                     <a class="btn btn-warning btn-sm" href="/users/edit/@user.Id">Edit</a>
                 </td>
-
+            }
             </tr>
 
         }

@@ -24,13 +24,18 @@
         }
 
         public UserDetailsModel UserById(string id) => this.db.Users
-            .Where(p => p.Id == id).ProjectTo<UserDetailsModel>().FirstOrDefault();
+        .Where(p => p.Id == id)
+        .ProjectTo<UserDetailsModel>()
+        .FirstOrDefault();
 
         public IEnumerable<UserDetailsModel> AllWithBlocked() => this.db.Users.ProjectTo<UserDetailsModel>();
 
         public IEnumerable<UserDetailsModel> All(int page, int pageSize) => this.db.Users
-            .Where(p => p.IsBlocked == false).OrderByDescending(p => p.FirstName)
-            .Skip((page - 1) * pageSize).Take(pageSize).ProjectTo<UserDetailsModel>().ToList();
+         .Where(p => p.IsBlocked == false)
+         .OrderByDescending(p => p.FirstName)
+         .Skip((page - 1) * pageSize)
+         .Take(pageSize)
+         .ProjectTo<UserDetailsModel>().ToList();
 
         public int UserCount() => this.db.Users.Count();
 

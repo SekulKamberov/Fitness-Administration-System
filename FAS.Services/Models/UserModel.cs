@@ -14,6 +14,7 @@
 
         public int ProofGiven { get; set; }
 
+        [ValidPhone]
         public string PhoneNumber { get; set; }
 
         [Required]

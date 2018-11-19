@@ -40,7 +40,6 @@
         }
 
         [ResponseCache(Duration = 60 * 12)]
-        [RedirectException]
         public async Task<IActionResult> Index()
         {
             var users = await this.userService.AllAsync();
@@ -103,7 +102,7 @@
             return View();
         }
         
-        [Route("gander/{id}")]
+        [Route("gander/{id:int:min(1)}")]
         public IActionResult Gander(int id)
         {
             return View("All", new UserPageListModel()
@@ -124,7 +123,7 @@
             });
         }
 
-        [Route("profile/{id}")]
+        [Route("profile/{id:int:min(1)}")]
         public IActionResult Profile(string id)
         {
             var user = this.userService.UserById(id);

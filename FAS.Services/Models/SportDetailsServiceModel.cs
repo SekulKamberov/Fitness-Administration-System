@@ -7,6 +7,7 @@
     using AutoMapper;
     using FAS.Data.Models;
     using FAS.Services.Contracts.Mapping;
+    using FAS.Common.Validation.Attributes;
 
     public class SportDetailsServiceModel : IMapFrom<Sport>, IHaveCustomMapping
     {
@@ -14,6 +15,7 @@
 
         public string Name { get; set; }
 
+        [Description(ErrorMessage = "Description must be less 2000 symbols")]
         public string Description { get; set; }
 
         public string Trainer { get; set; }
@@ -31,7 +33,7 @@
             mapper
                 .CreateMap<Sport, SportDetailsServiceModel>()
                 .ForMember(c => c.Trainer, cfg => cfg.MapFrom(c => $"{c.Trainer.FirstName} {c.Trainer.LastName}"))
-                .ForMember(c => c.Clients, cfg => cfg.MapFrom(c => c.Clients.Count))
+                .ForMember(c => c.Clients, cfg => cfg.MapFrom(c => c.UserSports.Count))
                 .ForMember(c => c.UserPhoto, cfg => cfg.MapFrom(c => c.Trainer.UserPhoto));
         }
     }

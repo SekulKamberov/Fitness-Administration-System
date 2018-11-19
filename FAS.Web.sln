@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAS.Web", "FAS.Web\FAS.Web.csproj", "{51E2503C-EF9F-4029-8C76-A07ABEBE12AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FAS.Web", "FAS.Web\FAS.Web.csproj", "{51E2503C-EF9F-4029-8C76-A07ABEBE12AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAS.Data", "FAS.Data\FAS.Data.csproj", "{F3FF2EC3-6DB4-4A6F-8097-17961D200C33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FAS.Data", "FAS.Data\FAS.Data.csproj", "{F3FF2EC3-6DB4-4A6F-8097-17961D200C33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAS.Services", "FAS.Services\FAS.Services.csproj", "{D298BD12-7750-4FEC-A1A8-CAF23B584167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FAS.Services", "FAS.Services\FAS.Services.csproj", "{D298BD12-7750-4FEC-A1A8-CAF23B584167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAS.Common", "FAS.Common\FAS.Common.csproj", "{3B1187BB-C23E-48ED-97CB-43D5B7A6D248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D298BD12-7750-4FEC-A1A8-CAF23B584167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D298BD12-7750-4FEC-A1A8-CAF23B584167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D298BD12-7750-4FEC-A1A8-CAF23B584167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1187BB-C23E-48ED-97CB-43D5B7A6D248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1187BB-C23E-48ED-97CB-43D5B7A6D248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1187BB-C23E-48ED-97CB-43D5B7A6D248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1187BB-C23E-48ED-97CB-43D5B7A6D248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

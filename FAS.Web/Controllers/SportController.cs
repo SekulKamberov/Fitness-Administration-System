@@ -8,6 +8,7 @@
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
+    using Microsoft.AspNetCore.Authorization;
 
     using FAS.Data.Models;
     using FAS.Services.Contracts;
@@ -15,7 +16,7 @@
     using FAS.Web.Infrastructure;
     using FAS.Web.Infrastructure.Extensions;
     using FAS.Web.Models.Sports;
-    using Microsoft.AspNetCore.Authorization;
+    
 
   
     public class SportController : Controller
@@ -36,13 +37,14 @@
         {
             return this.View();
         }
-    
+
 
         public async Task<IActionResult> Details(int id)
         {
             var model = new SportDetailsViewModel
             {
-                Sport = await this.sportService.ByIdAsync<SportDetailsServiceModel>(id)
+                Sport = await this.sportService.ByIdAsync<SportDetailsServiceModel>(id),
+                TraiUsersnings = await this.sportService.UsersInSport(id)
             };
 
             if (model.Sport == null)

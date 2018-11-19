@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FAS.Common\FAS.Common.csproj" />
     <ProjectReference Include="..\FAS.Data\FAS.Data.csproj" />
     <ProjectReference Include="..\FAS.Services\FAS.Services.csproj" />
   </ItemGroup>

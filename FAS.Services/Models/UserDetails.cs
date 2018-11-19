@@ -35,6 +35,7 @@
 
         public int ProofGiven { get; set; }
 
+        [ValidPhone]
         public string PhoneNumber { get; set; }
 
         public bool IsPayed { get; set; }

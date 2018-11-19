@@ -6,6 +6,7 @@
 
     using FAS.Data.Models;
     using FAS.Services.Contracts.Mapping;
+    using FAS.Common.Validation.Attributes;
 
     public class AdminUserListingServiceModel : IMapFrom<User>
     {
@@ -15,6 +16,7 @@
 
         public string LastName { get; set; }
 
+        [ValidEmail]
         public string Email { get; set; }
 
     }

@@ -9,14 +9,12 @@
     using System;
 
     public interface IUserService
-    {
-        
-
+    {    
         UserDetailsModel UserById(string id);
 
-        IEnumerable<UserDetailsModel> All(int page, int pageSize);
-
         IEnumerable<UserDetailsModel> AllWithBlocked();
+
+        IEnumerable<UserDetailsModel> All(int page, int pageSize);
 
         IEnumerable<UserDetailsModel> SortByGander(int sex, int page = 1, int pageSize = 10);
 

@@ -1,23 +1,22 @@
 ﻿namespace FAS.Web.Models.Users
 {
+    using FAS.Common.Validation.Attributes;
     using Microsoft.AspNetCore.Identity;
     using System;
     using System.ComponentModel.DataAnnotations;
-
-    // using FAS.Services.Models;
 
     public class UserDetails
     {
         public string Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "First name is required")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last name is required")]
         public string LastName { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Email is not correct")]
         public string Email { get; set; }
        
         public int Age { get; set; }
@@ -41,6 +40,8 @@
 
         public int ProofGiven { get; set; }
 
+        [Required(ErrorMessage = "Phone number is required")]
+        [ValidPhone(ErrorMessage = "Your phone number is not correct")]
         public string PhoneNumber { get; set; }
 
         public bool IsPayed { get; set; }

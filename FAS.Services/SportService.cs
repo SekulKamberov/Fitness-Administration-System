@@ -58,7 +58,7 @@
         }
 
         public async Task<bool> IsUserSignedInSportAsync(int sportId, string userId) => await this.db
-            .Sports.AnyAsync(c => c.Id == sportId && c.Clients.Any(s => s.UserId == userId));
+            .Sports.AnyAsync(c => c.Id == sportId && c.UserSports.Any(s => s.UserId == userId));
 
         public async Task<bool> SignUpUserAsync(int sportId, string userId)
         {
@@ -68,7 +68,7 @@
                 courseInfo.StartDate < DateTime.UtcNow.Date ||
                 courseInfo.IsStudentEnrolledInSport)
             {
-                return false; 
+                return false;
             }
 
             var studentInCourse = new UserSport
@@ -80,20 +80,18 @@
             await this.db.AddAsync(studentInCourse);
             await this.db.SaveChangesAsync();
 
-            return true;          
+            return true;
         }
 
         public async Task<bool> SignOutUserAsync(int courseId, string studentId)
         {
             var courseInfo = await GetSportInfo(courseId, studentId);
 
-            if (courseInfo == null ||
-                courseInfo.StartDate < DateTime.UtcNow.Date ||
-                !courseInfo.IsStudentEnrolledInSport)
+            if (courseInfo == null || courseInfo.StartDate < DateTime.UtcNow.Date || !courseInfo.IsStudentEnrolledInSport)
             {
                 return false;
             }
-			
+
             var studentInCourse = await this.db.FindAsync<UserSport>(studentId, courseId);
             this.db.Remove(studentInCourse);
 
@@ -107,10 +105,14 @@
             .Where(c => c.Id == sportId)
             .Select(c => new SportInfoServiceModel
             {
-             StartDate = c.StartDate,
-             IsStudentEnrolledInSport = c.Clients.Any(s => s.UserId == clientId)
+                StartDate = c.StartDate,
+                IsStudentEnrolledInSport = c.UserSports.Any(s => s.UserId == clientId)
             })
             .FirstOrDefaultAsync();
+
+        public async Task<IEnumerable<User>> UsersInSport(int sportId) => await this.db
+            .Users.Where(c => c.UserSports.Any(s => s.SportId == sportId)).ToListAsync<User>();
+
 
         public int SportsCount() => this.db.Sports.Count();
     }

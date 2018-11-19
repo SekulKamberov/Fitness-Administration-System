@@ -6,7 +6,7 @@
 
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
-    using Microsoft.AspNetCore.Mvc;    
+    using Microsoft.AspNetCore.Mvc;
 
     public class User : IdentityUser
     {
@@ -49,10 +49,6 @@
 
         public bool IsTrainer { get; set; }
 
-        public ICollection<UserSport> Sports { get; set; } = new List<UserSport>();
-
-        public ICollection<Sport> Trainings { get; set; } = new List<Sport>();
-
-        public ICollection<Article> Articles { get; set; } = new List<Article>();
+        public ICollection<UserSport> UserSports { get; set; } = new List<UserSport>();
     }
 }

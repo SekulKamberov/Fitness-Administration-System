@@ -1,6 +1,6 @@
 ﻿namespace FAS.Web.Infrastructure.Filters
 {
-    using System;
+    using System; 
     using System.Linq;
     using System.Threading.Tasks;
     using System.Collections.Generic;
@@ -12,7 +12,7 @@
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            if (!context.ModelState.IsValid)
+            if(!context.ModelState.IsValid)
             {
                 context.Result = new BadRequestResult();
             }

@@ -14,14 +14,14 @@
     {
         public string Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "First name is required")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last name is required")]
         public string LastName { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Email is not correct")]
         public string Email { get; set; }
 
         public int Age { get; set; }
@@ -46,7 +46,7 @@
         public int ProofGiven { get; set; }
 
         [Display(Name = "Phone")]
-        [DataType(DataType.PhoneNumber)]
+        [ValidPhone]
         public string PhoneNumber { get; set; }
 
         public bool IsPayed { get; set; }

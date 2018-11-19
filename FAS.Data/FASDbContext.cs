@@ -27,28 +27,25 @@
             builder
                 .Entity<UserSport>()
                 .HasOne(sc => sc.User)
-                .WithMany(s => s.Sports)
-                .HasForeignKey(sc => sc.UserId);
+                .WithMany(s => s.UserSports)
+                .HasForeignKey(sc => sc.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
                .Entity<UserSport>()
                .HasOne(sc => sc.Sport)
-               .WithMany(c => c.Clients)
-               .HasForeignKey(sc => sc.SportId);
+               .WithMany(c => c.UserSports)
+               .HasForeignKey(sc => sc.SportId)
+               .OnDelete(DeleteBehavior.Restrict);
 
-            builder
-                .Entity<Sport>()
-                .HasOne(c => c.Trainer)
-                .WithMany(t => t.Trainings)
-                .HasForeignKey(c => c.TrainerId);
+            //builder
+            //    .Entity<Schedule>()
+            //    .HasOne(a => a.Sport)
+            //    .WithMany(a => a.Schedules)
+            //    .HasForeignKey(a => a.SportId);
+                 
 
-            builder
-                .Entity<Article>()
-                .HasOne(a => a.Author)
-                .WithMany(a => a.Articles)
-                .HasForeignKey(a => a.AuthorId);
-
-            base.OnModelCreating(builder);         
+            base.OnModelCreating(builder);
         }
     }
 }
